@@ -1,0 +1,443 @@
+/* ========================================Importing Fonts===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ============================================================================================================- */
+
+/*============================================= Variables======================================================= */
+
+:root {
+  --primarycolor: #FFFFFF;
+  --secondarycolor: #FF5151;
+  --secondarycolor: #FF5151;
+  --tertiarycolor: #6E6E6E;
+  --quaternarycolor: #FF8585;
+  --neutralgrey: (lightgrey);
+  --backgroundcolor: rgba(255, 255, 255, 0.4);
+  --transparentcolor: transparent;
+  --charcoal: #36454F;
+  --mainheading: #36454F;
+  --jetblack: #36454F;
+  --sectionColor: #252525;
+  --font-family: "Inter", sans-serif;
+  --font-size-h1: 2.5em;
+  /* 40px */
+  --font-size-h2: 2em;
+  /* 32px */
+  --font-size-h3: 1.75em;
+  /* 28px */
+  --font-size-h4: 1.5em;
+  /* 24px */
+  --font-size-h5: 1.25em;
+  /* 20px */
+  --font-size-h6: 1em;
+  /* 16px */
+  --para-size: 1em;
+  /* 16px */
+}
+
+/* ============================================================================================================- */
+
+/* ==================================================Resets===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  max-width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+  /* overflow-x: hidden; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==============================================================================================================*/
+
+/* =============================================== Base Styles ==================================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font-family);
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+  /* letter-spacing: 10px; */
+  line-height: 1;
+  /* padding: 20px; */
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  letter-spacing: 0px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+img {
+  display: block;
+}
+
+section {
+  height: 100vh;
+  margin: 0px auto;
+  border: 1px solid #6E6E6E;
+  /* overflow: hidden; */
+}
+
+.container {
+  height: auto;
+  /* overflow: hidden; */
+}
+
+.list-item ul li {
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+.list-item ul li span {
+  background-color: var(--secondarycolor);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.list-item ul li span i {
+  color: var(--primarycolor);
+  text-align: center;
+  padding: 5px;
+}
+
+.button-reservation-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-reservation-container a {
+  padding: 10px 20px;
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: var(--font-family);
+  line-height: 15.7px;
+  letter-spacing: 1.5px;
+  transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+}
+
+.button-reservation-container a:hover {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  transform: scale(1.05);
+}
+
+
+/* =============================================================================================================*/
+
+/* =============================================================================================================*/
+
+/* Header CSS is kept in "header.css" */
+
+/* =============================================================================================================*/
+
+
+/* =============================================================================================================*/
+
+/* Hero Section */
+
+.container .main-container .hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.container .main-container .hero-container .hero-image {
+  background: url('../images/about-bgImage.jpg') no-repeat center/cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.container .main-container .hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(36, 36, 36, 0.3);
+  z-index: 1;
+}
+
+.container .main-container .hero-container .hero-image .hero-heading {
+  color: var(--primarycolor);
+  font-size: 3.5em;
+  transform: translate(50%, 35%);
+  z-index: 1;
+  position: relative;
+  font-size: var(--font-size-h1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 10px;
+  line-height: 1.5;
+  padding: 20px;
+  text-align: center;
+}
+
+/* =============================================================================================================*/
+
+/* =============================================================================================================*/
+
+/* Banner Section */
+
+.container .main-container .banner-container {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  background-color: var(--secondarycolor);
+}
+
+.container .main-container .banner-container .banner-content-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.container .main-container .banner-container .banner-content-container h2 {
+  color: var(--primarycolor);
+  transform: translate(0%, 50%);
+  font-size: var(--font-size-h2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 10px;
+  line-height: 1.5;
+  padding: 20px;
+  text-align: center;
+}
+
+.container .main-container .banner-container .banner-content-container .banner-button-container a {
+  background-color: var(--sectionColor);
+  color: var(--secondarycolor);
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 4px;
+  transition: background-color 0.7s, color 0.7s;
+  line-height: 15.7px;
+  font-weight: bold;
+}
+
+.container .main-container .banner-container .banner-content-container .banner-button-container a:hover {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+}
+
+/* ==============================================================================================================*/
+/* Packages Section */
+
+.container {
+  display: grid;
+}
+
+.container .section-container-pricing .pricing-container {
+  background-color: var(--primarycolor);
+}
+
+.container .section-container-pricing .pricing-container .pricing-content-container .pricing-content-title h3 {
+  font-size: var(--font-size-h3);
+  font-weight: bold;
+  color: var(--secondarycolor);
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container .section-container-pricing .pricing-container .pricing-content-container .pricing-content-title h2 {
+  font-size: var(--font-size-h2);
+  color: var(--mainheading);
+  margin: 20px 0;
+  line-height: 50px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.container .section-container-pricing .pricing-container .pricing-content-container .pricing-content-text p {
+  font-size: var(--para-size);
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  text-align: center;
+  max-width: 500px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 800px;
+}
+
+
+.container .section-container-pricing .pricing-container .pricing-cards-container {
+  display: grid;
+  gap: 20px 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container {
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--primarycolor);
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover {
+  background-color: var(--secondarycolor);
+  transform: scaleY(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  color: var(--primarycolor);
+  border-radius: 10px;
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .pricing-card-contents h2,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .pricing-card-contents h3,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .pricing-card-contents p,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .list-item ul li{
+  color: var(--primarycolor);
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .button-reservation-container a {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  font-weight: bold;
+}
+
+.button-reservation-container a {
+  padding: 10px 20px;
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: var(--font-family);
+  line-height: 15.7px;
+  letter-spacing: 1.5px;
+  transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+}
+
+.button-reservation-container a:hover {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  transform: scale(1.05);
+}
+
+.container .section-container-pricing .pricing-container .pricing-card-container .pricing-card-contents h2 {
+  font-size: var(--font-size-h2);
+  color: var(--mainheading);
+  line-height: 43.8px;
+  margin: 10px;
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container .pricing-card-contents h3 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-h3);
+  color: var(--secondarycolor);
+  line-height: 80px;
+  margin: 15px;
+  word-break: break-word;
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container .pricing-card-contents p,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container .pricing-card-contents ul li {
+  font-size: var(--para-size);
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  margin: 40px 20px;
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container .button-reservation-container {
+  margin-top: 30px;
+  justify-content: flex-start;
+}
+
+
+
+/* =============================================================================================================*/
+
+/* Custom styles for SweetAlert */
+.custom-swal {
+  background-color: var(--sectionColor);
+  color: var(--primarycolor);
+}
+
+.custom-swal .swal2-confirm {
+  background-color: var(--primarycolor);
+  color: var(--sectionColor);
+}
+
+/* Add more styles for other button types or elements as needed */
+
+.error {
+  color: red !important;
+}
+
+.error-border {
+  border: 2px solid red !important;
+}
+
+.success-border {
+  border: 4px solid green !important;
+}
+
+/* =============================================================================================================*/
+
+/* Footer CSS is kept in "header.css" */
+
+/* =============================================================================================================*/

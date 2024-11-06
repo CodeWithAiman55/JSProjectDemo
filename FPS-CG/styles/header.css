@@ -1,0 +1,288 @@
+/* ========================================Importing Fonts===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ============================================================================================================- */
+
+/*============================================= Variables======================================================= */
+
+:root {
+  --primarycolor: #FFFFFF;
+  --secondarycolor: #FF5151;
+  --tertiarycolor: #6E6E6E;
+  --quaternarycolor: #FF8585;
+  --neutralgrey: (lightgrey);
+  --backgroundcolor: rgba(255, 255, 255, 0.4);
+  --transparentcolor: transparent;
+  --headercolor: #121212;
+  --jetblack: #36454F;
+  --charcoal: #36454F;
+  --font-family: "Inter", sans-serif;
+}
+
+/* ============================================================================================================- */
+
+/* ==================================================Resets===================================================== */
+
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================================================================================================*/
+
+/* =============================================== Base Styles ==================================================*/
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1vw + 15px, 17px);
+  /* font-size: 17px; */
+  cursor: pointer;
+  display: inline-block;
+}
+
+.container {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================================================================== */
+
+/* Header Container with Grid Layout */
+
+.container .header-container {
+  background-color: var(--headercolor);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  /* grid-template-rows: 100px; */
+  place-items: center;
+  padding: 10px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Logo */
+
+.container .header-container .nav-logo-container {
+  /* margin-left: 25px; */
+}
+
+.container .header-container .nav-logo-container a img {
+  width: 130px;
+  display: block;
+}
+
+/* Navigation Menu */
+
+.container .header-container .nav-menu-container {
+  /* background-color: yellow; */
+  /* text-align: center; */
+}
+
+.container .header-container .nav-menu-container ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.container .header-container .nav-menu-container ul li a {
+  text-decoration: none;
+  /* font-size: clamp(14px, 1vw + 15px, 17px); */
+  white-space: nowrap;
+  color: var(--primarycolor);
+  margin: 10px;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+  display: inline-block;
+ 
+}
+
+.container .header-container .nav-menu-container ul li a:hover {
+  background-color: var(--secondarycolor);
+  border-radius: 4px;
+}
+
+/* Reservation Button */
+
+.container .header-container .nav-button-container {}
+
+.container .header-container .nav-button-container>a {
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-family: var(--font-family);
+  /* font-size: 15px; */
+  /* font-size: clamp(13px, 1vw + 13px, 15px); */
+  line-height: 15.7px;
+  letter-spacing: 1.5px;
+}
+
+.container .header-container .nav-button-container a:hover {
+  background-color: var(--primarycolor); 
+  color: var(--secondarycolor);
+  transform: scale(1.05); 
+}
+
+.container .header-container .bottom-nav-container{
+  width: 100%;
+  background-color: var(--secondarycolor);
+  height: 50px;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container .header-container .bottom-nav-container a{
+  color: var(--primarycolor);
+  padding:20px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 15.7px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+.container .header-container .bottom-nav-container a:hover{
+  font-size: 18px;
+}
+
+
+#shareBtn {
+  background-color: var(--headercolor); /* Button color */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 1000;
+}
+
+
+#shareBtn:hover {
+  background-color: var(--secondarycolor);
+  transform: translateY(-2px);
+}
+
+#shareBtn:active {
+  background-color: var(--headercolor);
+  transform: translateY(0);
+}
+
+/* ============================================================================================================== */
+
+
+@media only screen and (max-width:768px) {
+  .container .header-container {
+    padding: 0;
+    grid-template-columns: auto;
+    justify-items: start;
+
+  }
+
+  .container .header-container .nav-logo-container {
+    width: 100%;
+    padding: 20px 10px;
+    /* margin-left: 30px; */
+
+  }
+
+  .container .header-container .nav-logo-container a img {
+    width: 150px;
+  }
+
+  .container .header-container .nav-menu-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: block;
+  }
+
+  .container .header-container .nav-menu-container {
+    text-align: center;
+    width: 100%;
+  }
+
+  .container .header-container .nav-menu-container ul li a {
+    line-height: 50px;
+    display: block;
+  }
+
+
+  .container .header-container .nav-button-container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .container .header-container .nav-button-container a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1000px) {
+  .container .header-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .container .header-container .nav-logo-container {
+    /* margin-left: 50px; */
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .container .header-container .nav-logo-container a img {
+    width: 150px;
+  }
+
+  .container .header-container .nav-menu-container ul li a {
+    line-height: 50px;
+    display: block;
+  }
+
+  .container .header-container .nav-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+  }
+
+  .container .header-container .nav-button-container a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+}

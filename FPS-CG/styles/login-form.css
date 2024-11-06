@@ -1,0 +1,324 @@
+/* ========================================Importing Fonts===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ============================================================================================================- */
+
+/*============================================= Variables======================================================= */
+
+:root {
+  --primarycolor: #FFFFFF;
+  --secondarycolor: #FF5151;
+  --secondarycolor: #FF5151;
+  --tertiarycolor: #6E6E6E;
+  --quaternarycolor: #FF8585;
+  --neutralgrey: (lightgrey);
+  --backgroundcolor: rgba(255, 255, 255, 0.4);
+  --transparentcolor: transparent;
+  --sectionColor: #252525;
+  /* --jetblack: #36454F; */
+  --charcoal: #36454F;
+  --font-family: "Inter", sans-serif;
+  --mainheading: #36454F;
+  --jetblack: #36454F;
+}
+
+/* ============================================================================================================- */
+
+/* ==================================================Resets===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.list-item ul li {
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+.list-item ul li span {
+  background-color: var(--secondarycolor);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.list-item ul li span i {
+  color: var(--primarycolor);
+  text-align: center;
+  padding: 5px;
+}
+
+.button-reservation-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-reservation-container a {
+  padding: 10px 20px;
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: var(--font-family);
+  line-height: 15.7px;
+  letter-spacing: 1.5px;
+  transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+}
+
+.button-reservation-container a:hover {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  transform: scale(1.05);
+}
+
+
+.container .hero-container {
+  /* position: absolute;
+  z-index: 2; */
+  position: relative;
+  z-index: 2;
+}
+
+.container .main-container .hero-container .hero-image {
+  background: url('../images/about-bgImage.jpg') no-repeat center/cover;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  width: 100%;
+  /* z-index: 3; */
+  margin: 0px auto;
+  /* position: absolute; */
+  /* z-index: 2; */
+}
+
+.container .main-container .hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(36, 36, 36, 0.3);
+  z-index: 1;
+}
+
+.container .main-container .banner-container {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  background-color: var(--secondarycolor);
+  background-color: var(--secondarycolor);
+}
+
+.container .main-container .banner-container .banner-content-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.container .main-container .banner-container .banner-content-container h1 {
+  font-family: var(--font-family);
+  color: var(--primarycolor);
+  font-size: clamp(1.5em, 3vw, 2.5em);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 10px;
+  line-height: 1.5;
+  padding: 20px;
+  /* margin-left: 10px; */
+  text-align: center;
+}
+
+.container .main-container .banner-container .banner-content-container .banner-button-container a {
+  background-color: var(--mainheading);
+  color: var(--secondarycolor);
+  padding: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-family: var(--font-family);
+  font-size: 15px;
+  /* font-size: clamp(13px, 1vw + 13px, 15px); */
+  line-height: 15.7px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.container .main-container .hero-container .hero-image .hero-heading {
+  color: var(--primarycolor);
+  font-size: 2.5em;
+  transform: translate(50%, 35%);
+  z-index: 2;
+  position: relative;
+  font-family: var(--font-family);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 10px;
+  line-height: 1.5;
+  padding: 20px;
+  text-align: center;
+}
+
+.container .main-container .hero-container .hero-image .hero-heading  span{
+  color: var(--secondarycolor);
+}
+
+.container .form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 600px));
+  /* Adjusts automatically */
+  justify-content: space-evenly;
+  gap: 16px;
+  /* Space between grid items */
+  padding: 16px;
+  /* Container padding */
+  /* max-width: 500px; */
+  background-color: var(--secondarycolor);
+}
+
+form {
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 20px 0 30px 0;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  /* margin: 20px; */
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 10px;
+}
+
+input:hover {
+  background-color: #f4c5c5;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  /* margin: 20 4px 8px 0; */
+  /* margin: 30pxzzz; */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  /* margin: 20 4px 8px 0; */
+  margin: 15px 0 25px 0;
+}
+
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #FF5151;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px;
+}
+
+button:hover{
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  font-weight: bold;
+}
+
+fieldset {
+  /* margin-bottom: 30px; */
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+
+
+/* Custom styles for SweetAlert */
+
+.custom-swal {
+  background-color: var(--sectionColor) !important;
+  color: var(--secondarycolor) !important;
+}
+
+.custom-swal .swal2-confirm {
+  background-color: var(--sectionColor) !important;
+  color: var(--secondarycolor) !important;
+}
+
+
+/* Add more styles for other button types or elements as needed */
+
+.error {
+  color: red !important;
+}
+
+.error-border {
+  border: 2px solid red !important;
+}
+
+.success-border {
+  border: 4px solid green !important;
+}
+
+/* =============================================================================================================*/
+
+/* Footer CSS is kept in "Footer.css" */
+
+/* =============================================================================================================*/

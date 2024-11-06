@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 1000vh;
+    }
+    #shareBtn {
+    background-color: #4285F4; /* Button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* Fixed position at the bottom-right corner */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensures the button appears above other elements */
+}
+
+#shareBtn:hover {
+    background-color: #357ae8;
+    transform: translateY(-2px);
+}
+
+#shareBtn:active {
+    background-color: #2a65c1;
+    transform: translateY(0);
+}
+
+   
+  </style>
+</head>
+<body>
+  
+  <button type="button" id="shareBtn"></button>
+</body>
+<script>
+const shareBtn = document.querySelector('#shareBtn');
+shareBtn.addEventListener("click", (event) => {
+  if (navigator.share) {
+    navigator.share({
+      title: "Google Official Website",
+      url: "https://www.google.com"
+    })
+    .then(() => {
+      alert("Thanks For Sharing");
+    })
+    .catch((error) => {
+      alert("Error sharing: " + error);
+    });
+  } else {
+    alert("Sharing not supported in this browser.");
+  }
+});
+
+
+
+
+</script>
+</html>
